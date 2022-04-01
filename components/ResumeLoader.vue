@@ -1,13 +1,3 @@
 <template>
-
+  <div class="loader"></div>
 </template>
-
-<script>
-export default {
-  name: "ResumeLoader"
-}
-</script>
-
-<style scoped>
-
-</style>

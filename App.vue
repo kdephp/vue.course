@@ -1,7 +1,10 @@
 <template>
-
+  <div class="container column">
+    <ResumeForm @block-added="addBlock"/>
+    <ResumeView :blocks="blocks"/>
+  </div>
   <div class="container">
-    <AppLoader v-if="loading" />
+    <AppLoader v-if="loading"/>
     <ResumeComments
         v-else
         :comments="comments"
@@ -18,9 +21,10 @@ import AppLoader from './components/ResumeLoader'
 
 export default {
   data() {
-    return{
-    comments: [],
-    loading: false
+    return {
+      blocks: [],
+      comments: [],
+      loading: false
     }
   },
   methods: {
@@ -38,14 +42,5 @@ export default {
 </script>
 
 <style>
-  .avatar {
-    display: flex;
-    justify-content: center;
-  }
 
-  .avatar img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-  }
 </style>
